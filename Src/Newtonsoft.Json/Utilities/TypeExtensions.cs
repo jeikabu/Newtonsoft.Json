@@ -89,7 +89,7 @@ namespace Newtonsoft.Json.Utilities
 
         public static MemberTypes MemberType(this MemberInfo memberInfo)
         {
-#if !(NETFX_CORE || PORTABLE || PORTABLE40)
+#if !(NETFX_CORE || PORTABLE || PORTABLE40) || UNITY_4_5
             return memberInfo.MemberType;
 #else
             if (memberInfo is PropertyInfo)

@@ -1,5 +1,5 @@
 ﻿
-#if PocketPC || NETFX_CORE || PORTABLE40 || PORTABLE
+#if (PocketPC || NETFX_CORE || PORTABLE40 || PORTABLE) && !UNITY_4_5
 
 namespace System.Runtime.Serialization.Formatters
 {

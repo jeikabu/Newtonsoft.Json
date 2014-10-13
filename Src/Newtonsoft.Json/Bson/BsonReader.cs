@@ -297,7 +297,7 @@ namespace Newtonsoft.Json.Bson
             base.Close();
 
             if (CloseInput && _reader != null)
-#if !(NETFX_CORE || PORTABLE40 || PORTABLE)
+#if UNITY_4_5 || !(NETFX_CORE || PORTABLE40 || PORTABLE)
                 _reader.Close();
 #else
                 _reader.Dispose();

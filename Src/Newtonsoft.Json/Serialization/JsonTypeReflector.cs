@@ -427,7 +427,7 @@ namespace Newtonsoft.Json.Serialization
         {
             get
             {
-#if !(PORTABLE40 || PORTABLE || NETFX_CORE)
+#if !(PORTABLE40 || PORTABLE || NETFX_CORE) || UNITY_4_5
                 if (DynamicCodeGeneration)
                     return DynamicReflectionDelegateFactory.Instance;
 
