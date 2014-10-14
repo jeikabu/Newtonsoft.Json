@@ -92,7 +92,11 @@ namespace Newtonsoft.Json.Serialization
             }
         }
 
+#if UNITY_4_5
+        internal struct TypeNameKey
+#else
         internal struct TypeNameKey : IEquatable<TypeNameKey>
+#endif
         {
             internal readonly string AssemblyName;
             internal readonly string TypeName;

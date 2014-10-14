@@ -53,7 +53,11 @@ using System.Linq;
 
 namespace Newtonsoft.Json.Serialization
 {
+#if UNITY_4_5
+    internal struct ResolverContractKey
+#else
     internal struct ResolverContractKey : IEquatable<ResolverContractKey>
+#endif
     {
         private readonly Type _resolverType;
         private readonly Type _contractType;

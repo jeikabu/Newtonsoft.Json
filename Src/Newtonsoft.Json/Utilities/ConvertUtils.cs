@@ -251,7 +251,11 @@ namespace Newtonsoft.Json.Utilities
 #endif
         }
 
+#if UNITY_4_5
+        internal struct TypeConvertKey
+#else
         internal struct TypeConvertKey : IEquatable<TypeConvertKey>
+#endif
         {
             private readonly Type _initialType;
             private readonly Type _targetType;
